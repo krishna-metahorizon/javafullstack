@@ -1,0 +1,39 @@
+https://github.com
+UN: krishna-metahorizon
+PW: **********
+
+git --version
+git config --global user.name "Krishna Aryal"
+git config --global user.email krishna.metahorizon@gmail.com
+git config --global user.password **********
+
+git status //Show the status
+git add . //Adding new file
+git commit -m "May 25 2023 5:08 PM" //Commit (Pack)
+git push -u origin main //Sending file
+
+
+
+
+
+
+
+https://github.com/krishna-metahorizon/javafullstack.git
+
+echo "# javafullstack" >> README.md
+git init
+git add README.md
+git commit -m "first commit"
+git branch -M main
+git remote add origin https://github.com/krishna-metahorizon/javafullstack.git
+git push -u origin main
+
+git remote add origin https://github.com/krishna-metahorizon/javafullstack.git
+git branch -M main
+git push -u origin main
+
+
+git clone https://github.com/krishna-metahorizon/javafullstack.git
+
+
+

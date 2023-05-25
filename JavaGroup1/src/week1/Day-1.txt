@@ -1,0 +1,13 @@
+1. Install JDK
+2. javac.exe
+3. java.exe
+4. Hello.txt
+5. cmd
+java
+java --version
+
+HW
+java Third 1 2 3 4 5
+Sum: 15
+
+

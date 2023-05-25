@@ -1,0 +1,23 @@
+java.util.Scanner
+void close()
+
+String nextLine() //Method -> Function which return String; Read from Keyboard
+
+Basic data types
+boolean
+char
+byte, short, int, long, float, double
+
+- Auto
+- memory allocation
+- default value allocation 
+
+Class -> Extended type/Referenced type/User defined type
+Object
+String
+Scanner
+
+- Manually
+- memory allocation
+- default value allocation 
+
