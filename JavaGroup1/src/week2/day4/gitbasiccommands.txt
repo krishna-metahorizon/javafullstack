@@ -1,0 +1,13 @@
+https://github.com
+UN: user_name
+PW: **********
+
+git --version
+git config --global user.name "Full Name"
+git config --global user.email user_email@gmail.com
+git config --global user.password **********
+
+git status //Show the status
+git add . //Adding new file
+git commit -m "May 25 2023 5:08 PM" //Commit (Pack)
+git push -u origin main //Sending file
