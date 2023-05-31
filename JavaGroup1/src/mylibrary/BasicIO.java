@@ -18,7 +18,13 @@ public class BasicIO {
 	public static String readString() {
 		return (new Scanner(System.in).nextLine());
 	}
+	public static char readChar() {
+		return (new Scanner(System.in).nextLine().charAt(0));
+	}
 	public static int readInt() {
 		return (Integer.parseInt(readString()));
+	}
+	public static double readDouble() {
+		return (Double.parseDouble(readString()));
 	}
 }
