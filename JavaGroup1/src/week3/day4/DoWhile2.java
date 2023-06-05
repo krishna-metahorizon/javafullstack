@@ -9,14 +9,19 @@ public class DoWhile2 {
 		// declare
 		int choice;
 		char ch;
-
 		do {
 			// input
 			BasicIO.printMessage("----------- Main Menu -----------");
 			BasicIO.newLine();
 			BasicIO.printMessage("1. ADD");
 			BasicIO.newLine();
-			BasicIO.printMessage("0. Exit");
+			BasicIO.printMessage("2. SUB");
+			BasicIO.newLine();
+			BasicIO.printMessage("3. PRD");
+			BasicIO.newLine();
+			BasicIO.printMessage("4. DIV");
+			BasicIO.newLine();
+			BasicIO.printMessage("0. EXIT");
 			BasicIO.newLine();
 			BasicIO.printMessage("---------------------------------");
 			BasicIO.newLine();
