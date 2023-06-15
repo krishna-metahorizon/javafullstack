@@ -1,10 +1,10 @@
-package jdbc;
+package jdbc.v1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.Statement;
 
-public class DeleteRecord {
+public class UpdateRecord {
 	
 	public static void main(String[] args) {
 		//Declaration
@@ -22,11 +22,11 @@ public class DeleteRecord {
 			Connection conn = DriverManager.getConnection(URL, DBUSER, DBPASS); //Connect with db
 			//Insert Record
 			Statement stat = conn.createStatement();
-			String sql="DELETE FROM tbl_person WHERE pid=1";
+			String sql="UPDATE tbl_person SET name='New Name', address='New Address' WHERE pid=1";
 			stat.executeUpdate(sql);
 			stat.close();
 			conn.close();
-			System.out.println("Delete Record Successfully");
+			System.out.println("Update Record Successfully");
 		}
 		catch(Exception ex) {
 			System.out.println("Error : "+ex.getMessage());

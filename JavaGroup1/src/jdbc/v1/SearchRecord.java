@@ -1,11 +1,11 @@
-package jdbc;
+package jdbc.v1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.ResultSet;
 import java.sql.Statement;
 
-public class DisplayAllRecords {
+public class SearchRecord {
 	
 	public static void main(String[] args) {
 		//Declaration
@@ -24,7 +24,7 @@ public class DisplayAllRecords {
 			
 			//Select All Records
 			Statement stat = conn.createStatement(); //Object which used to run SQL Statements
-			String sql="SELECT * FROM tbl_person"; //SQL Query
+			String sql="SELECT * FROM tbl_person WHERE pid=1"; //SQL Query
 			ResultSet rs = stat.executeQuery(sql); //Get all records from table
 			System.out.println("PID\tNAME\t\tADDRESS");
 			while(rs.next()) { //return true while record found
@@ -33,7 +33,7 @@ public class DisplayAllRecords {
 			rs.close();
 			stat.close();
 			conn.close();
-			System.out.println("Display all records successfully");
+			System.out.println("Search record successfully");
 		}
 		catch(Exception ex) {
 			System.out.println("Error : "+ex.getMessage());

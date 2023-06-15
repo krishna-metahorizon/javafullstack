@@ -1,9 +1,10 @@
-package jdbc;
+package jdbc.v1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
+import java.sql.Statement;
 
-public class JDBC {
+public class DeleteRecord {
 	
 	public static void main(String[] args) {
 		//Declaration
@@ -19,8 +20,13 @@ public class JDBC {
 			//Connection
 			Class.forName(DRIVER); //Loading driver
 			Connection conn = DriverManager.getConnection(URL, DBUSER, DBPASS); //Connect with db
+			//Insert Record
+			Statement stat = conn.createStatement();
+			String sql="DELETE FROM tbl_person WHERE pid=1";
+			stat.executeUpdate(sql);
+			stat.close();
 			conn.close();
-			System.out.println("Connect with database successfully");
+			System.out.println("Delete Record Successfully");
 		}
 		catch(Exception ex) {
 			System.out.println("Error : "+ex.getMessage());

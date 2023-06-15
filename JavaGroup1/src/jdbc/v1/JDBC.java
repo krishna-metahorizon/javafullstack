@@ -1,10 +1,9 @@
-package jdbc;
+package jdbc.v1;
 
 import java.sql.Connection;
 import java.sql.DriverManager;
-import java.sql.Statement;
 
-public class UpdateRecord {
+public class JDBC {
 	
 	public static void main(String[] args) {
 		//Declaration
@@ -20,13 +19,8 @@ public class UpdateRecord {
 			//Connection
 			Class.forName(DRIVER); //Loading driver
 			Connection conn = DriverManager.getConnection(URL, DBUSER, DBPASS); //Connect with db
-			//Insert Record
-			Statement stat = conn.createStatement();
-			String sql="UPDATE tbl_person SET name='New Name', address='New Address' WHERE pid=1";
-			stat.executeUpdate(sql);
-			stat.close();
 			conn.close();
-			System.out.println("Update Record Successfully");
+			System.out.println("Connect with database successfully");
 		}
 		catch(Exception ex) {
 			System.out.println("Error : "+ex.getMessage());
