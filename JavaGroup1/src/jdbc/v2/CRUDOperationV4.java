@@ -130,30 +130,42 @@ public class CRUDOperationV4 {
 	public static void main(String[] args) {
 		int pid;
 		String name, address;
+		
 		//Insert Record
+		/*
 		pid=read from user?
 		name, address = read from user?
 		insert(1,"Raj","KTM");
+		*/
 		
 		//Update Record
+		/*
 		pid=read from user?
 		name, address = read from user?
 		update(1, "Raj Sharma", "Lat");
+		*/
 		
 		//Search Record
+		/*
 		pid=read from user?
 		searchRecord(1);
+		*/
 		
 		//Delete Record
+		/*
 		pid=read from user?
 		delete(100);
 		displayAll();
+		*/
 		
 		//Convert to Menu Based program
+		/*
 		1. Add
 		2. Display All
 		3. Search
 		4. Update
 		5. Delete
+		0. Exit
+		*/
 	}
 }

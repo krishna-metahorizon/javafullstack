@@ -131,22 +131,30 @@ public class CRUDOperationV3 {
 		int pid;
 		String name, address;
 		//Insert Record
+		/*
 		pid=read from user?
 		name, address = read from user?
 		insert(1,"Raj","KTM");
+		*/
 		
 		//Update Record
+		/*
 		pid=read from user?
 		name, address = read from user?
 		update(1, "Raj Sharma", "Lat");
+		*/
 		
 		//Search Record
+		/*
 		pid=read from user?
 		searchRecord(1);
+		*/
 		
 		//Delete Record
+		/*
 		pid=read from user?
 		delete(100);
 		displayAll();
+		*/
 	}
 }
