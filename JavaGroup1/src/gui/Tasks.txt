@@ -1,0 +1,6 @@
+Tasks:
+1 Insert Record - CRUD1 - Completed
+2 Search Record - CRUD2 - Completed
+3 Search and Update Record - CRUD3
+4 Search and Delete Record - CRUD4
+5 Display Records in Table (JTable) - CRUD5

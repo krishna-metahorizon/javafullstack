@@ -2,6 +2,9 @@ package jdbc.v3;
 
 import java.sql.Connection;
 import java.sql.PreparedStatement;
+import java.sql.ResultSet;
+
+import global.Global;
 
 public class CRUDV1 extends MySQLConnection{
 
@@ -28,7 +31,27 @@ public class CRUDV1 extends MySQLConnection{
 
 	public boolean search(int pid) {
 		boolean result = false;
-
+		String sql = "SELECT * FROM tbl_person WHERE pid=?";
+		Global.pid=-1;
+		try {
+			Connection conn=connect(); //Connect with db
+			PreparedStatement pstat = conn.prepareStatement(sql);
+			pstat.setInt(1, pid);
+			ResultSet rs = pstat.executeQuery();
+			while(rs.next()) {
+				result=true;
+				Global.pid = rs.getInt("pid");
+				Global.name = rs.getString("name");
+				Global.address = rs.getString("address");
+			}
+			pstat.close();
+			rs.close();
+			close(conn);
+		}
+		catch(Exception ex) {
+			Global.pid=-1;
+			System.out.println("Error : "+ex.getMessage());
+		}
 		return result;
 	}
 
