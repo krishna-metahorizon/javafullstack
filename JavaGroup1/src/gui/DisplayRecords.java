@@ -1,18 +1,22 @@
 package gui;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
 import java.sql.Connection;
 import java.sql.DriverManager;
 import java.sql.PreparedStatement;
 import java.sql.ResultSet;
 
+import javax.swing.JButton;
 import javax.swing.JFrame;
 import javax.swing.JScrollPane;
 import javax.swing.JTable;
 import javax.swing.table.DefaultTableModel;
 
-public class DisplayRecords extends JFrame{	
+public class DisplayRecords extends JFrame implements ActionListener{	
 	JTable table; //user interaction -> programming
 	DefaultTableModel dtm; //set columns //set rows
 	JScrollPane sc;
+	JButton btnExport;
 	
 	public DisplayRecords() {
 		setTitle("Display All Records");
@@ -50,11 +54,30 @@ public class DisplayRecords extends JFrame{
 			System.out.println("Error : "+ex.getMessage());
 		}
 		sc.setBounds(20, 20, 500, 175);
+		btnExport = new JButton("Export");
+		btnExport.addActionListener(this);
+		
+		btnExport.setBounds(20, 220, 75, 40);
+		
 		add(sc);
+		add(btnExport);
 		setVisible(true);
 	}
 	
 	public static void main(String[] args) {
 		new DisplayRecords();
+	}
+
+	@Override
+	public void actionPerformed(ActionEvent e) {
+		if (e.getSource()==btnExport) {
+			int ROWS = table.getRowCount();
+			for(int i=0; i<ROWS; i++) {
+				String strRow = table.getValueAt(i, 0)+","+table.getValueAt(i, 1)+","+table.getValueAt(i, 2);
+				System.out.println(strRow); //Write on file (i.e. data.csv)
+				//Write String on file
+			}
+		}
+		
 	}
 }

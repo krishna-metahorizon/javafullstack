@@ -11,12 +11,12 @@ import javax.swing.JTextField; //TextBox
 
 import jdbc.v3.CRUDV1;
 
-public class CRUD1 extends JFrame implements ActionListener {
+public class InsertRecord extends JFrame implements ActionListener {
 	JLabel lblPID, lblName, lblAddress;
 	JTextField txtPID, txtName, txtAddress;
 	JButton btnSave, btnClose;
 	
-	public CRUD1() {
+	public InsertRecord() {
 		setTitle("CRUD-1");
 		setSize(350, 300);
 		setResizable(false);
@@ -80,6 +80,6 @@ public class CRUD1 extends JFrame implements ActionListener {
 	}
 	
 	public static void main(String[] args) {
-		new CRUD1();
+		new InsertRecord();
 	}
 }
